@@ -15,5 +15,6 @@ cd shortlink
 npm install
 npm run dev
 ```
-Remember to edit `.env.sample` to `.env` or `.env.local` and populate with proper environment variables
+Modify `.env.local` to appropriate variables
+
 Development server will be live at [http://localhost:3000](http://localhost:3000)
