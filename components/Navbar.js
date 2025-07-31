@@ -13,7 +13,7 @@ const Navbar = () => {
         <Link href='/'><li className='py-2.5 px-3 hover:bg-orange-200 hover:cursor-pointer rounded-2xl'>Home</li></Link>
         <Link href='/contact'><li className='py-2.5 px-3 hover:bg-orange-200 hover:cursor-pointer rounded-2xl'>Contact</li></Link>
         <Link href='/shorten'><li className='try-now-btn py-2.5 px-3 bg-orange-200 shadow-lg hover:cursor-pointer rounded-2xl'>Try Now!</li></Link>
-        <li className='p-1 bg-orange-200 hover:cursor-pointer rounded-full'><Link href='https://github.com/1nf3rn0314' target='_blank'><Image src="github.svg" width={32} height={32} alt="GitHub Icon"/></Link></li>
+        <li className='p-1 bg-orange-200 hover:cursor-pointer rounded-full'><Link href='https://github.com/1nf3rn0314/shortlink' target='_blank'><Image src="github.svg" width={32} height={32} alt="GitHub Icon"/></Link></li>
       </ul>
     </nav>
   )
