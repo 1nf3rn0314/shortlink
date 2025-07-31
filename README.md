@@ -1,5 +1,5 @@
 ## Live Demo
-The project is hosted at [Vercel](https://vercel.com). Click [here](https://google.com) for the live demo.
+The project is hosted at [Vercel](https://vercel.com). Click [here](https://shortlink-pi-umber.vercel.app/) for the live demo.
 
 ## How it works?
 
