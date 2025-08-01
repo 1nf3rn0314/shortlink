@@ -52,7 +52,7 @@ const LinkShortener = () => {
           <input type='text' value={url} placeholder='Paste long URL here' className='text-lg w-full border-1 border-orange-100 focus:border-orange-500 p-3 rounded-xl bg-orange-100 outline-none' onChange={event => setUrl(event.target.value)}/>
           <div className={`${(isValidURL(url) || url === '') && 'hidden'} text-red-600`}>Invalid URL</div>
         </div>
-        <input type='text' value={endpoint} placeholder='Custom URL endpoint' className='text-lg w-full border-1 border-orange-100 focus:border-orange-500 p-3 rounded-xl bg-orange-100 outline-none' onChange={event => setEndpoint(event.target.value)}/>
+        <input type='text' value={endpoint} placeholder='Custom URL endpoint (without slashes)' className='text-lg w-full border-1 border-orange-100 focus:border-orange-500 p-3 rounded-xl bg-orange-100 outline-none' onChange={event => setEndpoint(event.target.value)}/>
         <button onClick={generate} className='try-now-btn w-full mx-auto p-3 bg-orange-200 shadow-lg hover:cursor-pointer rounded-2xl text-lg'>Generate</button>
       </div>
       {generated && 
