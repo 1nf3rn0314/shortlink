@@ -35,11 +35,23 @@ const LinkShortener = () => {
       .catch((error) => console.error(error));
   }
 
+  const isValidURL = (url) => {
+    try {
+      new URL(url);
+      return true;
+    } catch (err) {
+      return false;
+    }
+  }
+
   return (
     <div className='bg-orange-300 w-fit p-10 rounded-4xl border-2 border-orange-500 mx-auto mt-25 flex flex-col gap-10'>
       <h1 className='text-2xl'>Generate your short and easily shareable URLs</h1>
       <div className='flex flex-col gap-3.5'>
-        <input type='text' value={url} placeholder='Paste long URL here' className='text-lg w-full border-1 border-orange-100 focus:border-orange-500 p-3 rounded-xl bg-orange-100 outline-none' onChange={event => setUrl(event.target.value)}/>
+        <div className="flex flex-col gap-1">
+          <input type='text' value={url} placeholder='Paste long URL here' className='text-lg w-full border-1 border-orange-100 focus:border-orange-500 p-3 rounded-xl bg-orange-100 outline-none' onChange={event => setUrl(event.target.value)}/>
+          <div className={`${(isValidURL(url) || url === '') && 'hidden'} text-red-600`}>Invalid URL</div>
+        </div>
         <input type='text' value={endpoint} placeholder='Custom URL endpoint' className='text-lg w-full border-1 border-orange-100 focus:border-orange-500 p-3 rounded-xl bg-orange-100 outline-none' onChange={event => setEndpoint(event.target.value)}/>
         <button onClick={generate} className='try-now-btn w-full mx-auto p-3 bg-orange-200 shadow-lg hover:cursor-pointer rounded-2xl text-lg'>Generate</button>
       </div>
