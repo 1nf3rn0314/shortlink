@@ -1,5 +1,5 @@
 import { redirect } from "next/navigation";
-import clientPromise from "@/components/lib/mongodb";
+import clientPromise from "@/lib/mongodb";
 
 export default async function Page({ params }) {
   const endpoint = (await params).endpoint;
